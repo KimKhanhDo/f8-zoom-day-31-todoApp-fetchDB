@@ -17,8 +17,6 @@ const modalContent = taskModal.querySelector('.modal');
 
 let editId = null;
 const BASE_API = 'http://localhost:3000/tasks';
-
-// Hold the list of tasks to avoid calling the API repeatedly.
 let tasks = [];
 
 // === INITIALIZE APP ===
@@ -304,7 +302,7 @@ function setActiveTab(tab) {
 // === EVENT HANDLERS ===
 function handleSearchFocus() {
     setActiveTab(tabAll);
-    renderTasks(tasks); // Dùng state cục bộ
+    renderTasks(tasks);
 }
 
 function handleSearchInput(e) {
@@ -349,7 +347,7 @@ function handleTaskActions(e) {
     if (!taskElement) return;
 
     const taskId = taskElement.dataset.id;
-    const task = tasks.find((t) => t.id === taskId); // == vì data-id có thể là string
+    const task = tasks.find((t) => t.id === taskId);
 
     if (!task) return;
 
