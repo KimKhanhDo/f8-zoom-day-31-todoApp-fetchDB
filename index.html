@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Todo List App</title>
+
+        <!-- Font Awesome CDN -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <!-- CSS -->
+        <link
+            rel="stylesheet"
+            href="style.css"
+        />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">My NoteBook</span>
+                </div>
+
+                <h1 class="header-title">Todo List</h1>
+
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fa-solid fa-bell fa-icon"></i>
+                    </button>
+                    <div class="profile-avatar">
+                        <i class="fa-solid fa-user fa-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Controls Section -->
+            <div class="controls">
+                <div class="search-section">
+                    <div class="search-container">
+                        <i
+                            class="fa-solid fa-magnifying-glass fa-icon search-icon"
+                        ></i>
+                        <input
+                            type="text"
+                            class="search-input"
+                            placeholder="Search List"
+                        />
+                    </div>
+
+                    <button
+                        type="button"
+                        class="add-btn"
+                    >
+                        <i class="fa-solid fa-plus fa-icon"></i>
+                        Add New Task
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab-list">
+                    <button
+                        type="button"
+                        class="tab-button tab-active"
+                    >
+                        Active Task
+                    </button>
+                    <button
+                        type="button"
+                        class="tab-button tab-completed"
+                    >
+                        Completed
+                    </button>
+                    <button
+                        type="button"
+                        class="tab-button tab-all"
+                    >
+                        All Tasks
+                    </button>
+                </div>
+            </div>
+
+            <!-- Task Grid -->
+            <div
+                id="todo-list"
+                class="task-grid"
+            >
+                <!-- Make a Report Card -->
+            </div>
+
+            <!-- Add Task Modal -->
+            <div
+                id="addTaskModal"
+                class="modal-overlay"
+            >
+                <div class="modal modern">
+                    <button
+                        type="button"
+                        class="modal-close-btn"
+                    >
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="modal-header">
+                        <h2 class="modal-title">Add New Task</h2>
+                    </div>
+
+                    <form
+                        id="taskForm"
+                        class="modal-form todo-app-form"
+                    >
+                        <!-- Task Name -->
+                        <div class="form-group">
+                            <label for="title">Task Name</label>
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                required
+                            />
+                        </div>
+
+                        <!-- Due Date -->
+                        <div class="form-group icon-input">
+                            <label for="dueDate">Due Date</label>
+                            <input
+                                type="date"
+                                id="dueDate"
+                                name="dueDate"
+                            />
+                        </div>
+
+                        <!-- Start Time -->
+                        <div class="form-group icon-input">
+                            <label for="startTime">Start Time</label>
+                            <input
+                                type="time"
+                                id="startTime"
+                                name="startTime"
+                            />
+                        </div>
+
+                        <!-- End Time -->
+                        <div class="form-group icon-input">
+                            <label for="endTime">End Time</label>
+                            <input
+                                type="time"
+                                id="endTime"
+                                name="endTime"
+                            />
+                        </div>
+
+                        <!-- Category -->
+                        <div class="form-group select-wrapper">
+                            <label for="category">Category</label>
+                            <div class="select-wrapper">
+                                <select
+                                    id="category"
+                                    name="category"
+                                >
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                    >
+                                        Choose Category
+                                    </option>
+                                    <option value="meeting">Meeting</option>
+                                    <option value="design">Design</option>
+                                    <option value="development">
+                                        Development
+                                    </option>
+                                    <option value="planning">Planning</option>
+                                    <option value="client">Client Work</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <i
+                                    class="fa-solid fa-chevron-down select-icon"
+                                ></i>
+                            </div>
+                        </div>
+
+                        <!-- Priority -->
+                        <div class="form-group select-wrapper">
+                            <label for="priority">Priority</label>
+                            <div class="select-wrapper">
+                                <select
+                                    id="priority"
+                                    name="priority"
+                                >
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                    >
+                                        Choose Priority
+                                    </option>
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                                <i
+                                    class="fa-solid fa-chevron-down select-icon"
+                                ></i>
+                            </div>
+                        </div>
+
+                        <!-- Card Color -->
+                        <div class="form-group">
+                            <label for="cardColor">Card Color</label>
+                            <div class="select-wrapper">
+                                <select
+                                    id="cardColor"
+                                    name="cardColor"
+                                >
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                    >
+                                        Choose Color
+                                    </option>
+                                    <option value="blue">Blue</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="green">Green</option>
+                                </select>
+                                <i
+                                    class="fa-solid fa-chevron-down select-icon"
+                                ></i>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="3"
+                            ></textarea>
+                        </div>
+
+                        <!-- Action Btn -->
+                        <div class="modal-actions">
+                            <button
+                                type="button"
+                                class="cancel-btn"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                type="submit"
+                                class="submit-btn"
+                            >
+                                Add New
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- Toast section -->
+        <div
+            id="toast-container"
+            class="toast-container"
+        ></div>
+
+        <!-- Alert Modal -->
+        <div
+            id="alertModal"
+            class="modal-overlay alert-overlay"
+        >
+            <div class="alert-box">
+                <p class="alert-message">Default message</p>
+                <div class="alert-actions">
+                    <button
+                        id="alertCancel"
+                        class="alert-cancel-btn"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        id="alertConfirm"
+                        class="alert-confirm-btn"
+                    >
+                        OK
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>

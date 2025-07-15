@@ -1,0 +1,82 @@
+{
+  "tasks": [
+    {
+      "id": "5444",
+      "title": "Client meeting with ABC Corp",
+      "dueDate": "2025-07-26",
+      "startTime": "19:49",
+      "endTime": "19:48",
+      "category": "development",
+      "priority": "low",
+      "cardColor": "pink",
+      "description": "Meet client\n\n",
+      "isCompleted": true,
+      "createdAt": "2025-07-14T09:46:32.310Z"
+    },
+    {
+      "id": "ae23",
+      "title": "Design homepage layout",
+      "dueDate": "2025-07-11",
+      "startTime": "19:49",
+      "endTime": "19:50",
+      "category": "design",
+      "priority": "medium",
+      "cardColor": "purple",
+      "description": "Create new wireframes for landing page.",
+      "isCompleted": true,
+      "createdAt": "2025-07-14T09:47:09.843Z"
+    },
+    {
+      "id": "ac97",
+      "title": "Weekly team planning",
+      "dueDate": "2025-07-29",
+      "startTime": "19:50",
+      "endTime": "19:51",
+      "category": "planning",
+      "priority": "high",
+      "cardColor": "yellow",
+      "description": "Sprint review and next week's task planning.",
+      "isCompleted": false,
+      "createdAt": "2025-07-14T09:48:01.023Z"
+    },
+    {
+      "id": "7f8e",
+      "title": "React",
+      "dueDate": "2025-07-10",
+      "startTime": "22:19",
+      "endTime": "22:19",
+      "category": "development",
+      "priority": "high",
+      "cardColor": "yellow",
+      "description": "Learn react 123",
+      "isCompleted": false,
+      "createdAt": "2025-07-14T12:16:33.000Z"
+    },
+    {
+      "id": "0ffe",
+      "title": "JavaScript",
+      "dueDate": "2025-07-24",
+      "startTime": "22:38",
+      "endTime": "13:38",
+      "category": "design",
+      "priority": "high",
+      "cardColor": "green",
+      "description": "dadsdas",
+      "isCompleted": false,
+      "createdAt": "2025-07-14T12:38:15.051Z"
+    },
+    {
+      "id": "3325",
+      "title": "Learning Promise",
+      "dueDate": "2025-07-18",
+      "startTime": "13:02",
+      "endTime": "13:02",
+      "category": "development",
+      "priority": "high",
+      "cardColor": "blue",
+      "description": "Learning asynchronous.",
+      "isCompleted": false,
+      "createdAt": "2025-07-15T04:00:14.674Z"
+    }
+  ]
+}
